@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
           .then(response => {
             if (response.ok) {
-              status.textContent = "Thanks for your message!";
-              contactForm.reset();
+                window.location.href = "https://mm-services.vercel.app/thank-you.html";
             } else {
               response.json().then(data => {
                 status.textContent =
