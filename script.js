@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Projects data (edit filenames/URLs as needed)
   const projects = [
-    { name: "HSSH NGO", logo: "clients/hssh-logo.png", url: "https://hsshngo.org" },
+    { name: "HSSH NGO", logo: "https://hsshngo.org/wp-content/uploads/2024/12/Logo-new--150x150.png", url: "https://hsshngo.org" },
     { name: "SGW Foundation", logo: "clients/sgw-logo.png", url: "https://sgwfoundation.org" },
     { name: "Client 3", logo: "clients/client3.png", url: "#" },
     { name: "Client 4", logo: "clients/client4.png", url: "#" },
@@ -102,3 +102,4 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape' && siteNav.classList.contains('show')) siteNav.classList.remove('show');
   });
 });
+
