@@ -1,160 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MM Services | WordPress Development</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MM Services | Web & Marketing Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="MM Services — Professional website design, logo & branding, SEO & digital marketing." />
 </head>
 <body>
-
- 
   <!-- Header -->
-<header>
-  <div class="container header-flex">
-    <div class="logo-container">
-    <img src="MM-LOGO.jpg" alt="MM Services Logo" class="logo" />
-      <div class="site-title">
-        <h1>MM Services</h1>
-        <p>Your Trusted WordPress Development Partner</p>
-      </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="logo.png" alt="MM Services" class="brand-logo" />
+        <div class="brand-text">
+          <h1>MM Services</h1>
+          <p>Web • Design • Marketing</p>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamb"></span>
+      </button>
+
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
-
-  <!-- About -->
- 
-<section id="about" class="section">
-  <div class="container about-grid">
-    <div class="about-text">
-      <h2>👋 About Us</h2>
-      <p>We are a passionate team delivering high-quality WordPress development solutions. Whether it’s a custom theme, plugin integration, or complete website build — we ensure speed, security, and a user-friendly experience.</p>
-      <ul class="about-points">
-        <li>✅ 1+ Years of Experience</li>
-        <li>✅ 2+ Projects Delivered</li>
-        <li>✅ Trusted by NGOs & Small Businesses</li>
-      </ul>
-    </div>
-    <div class="about-image">
-      <img src="https://cdn-icons-png.flaticon.com/512/2703/2703913.png" alt="Team Working" />
-    </div>
-  </div>
-</section>
-
-
-  
- <!-- Services -->
-<section id="services" class="section dark">
-  <div class="container">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>🖥️ Custom WordPress Development</h3>
-        <p>We build fast, secure, and fully customized WordPress websites tailored to your business goals.</p>
-      </div>
-      <div class="service-card">
-        <h3>🎨 Theme Customization</h3>
-        <p>We tailor existing themes to match your brand style, functionality, and user experience.</p>
-      </div>
-      <div class="service-card">
-        <h3>🔌 Plugin Development</h3>
-        <p>Custom plugin solutions to extend your WordPress site's features and automate processes.</p>
-      </div>
-      <div class="service-card">
-        <h3>⚡ Speed Optimization</h3>
-        <p>Enhance your website's performance and load times for better SEO and user retention.</p>
-      </div>
-      <div class="service-card">
-        <h3>🔍 SEO Setup & Maintenance</h3>
-        <p>On-page SEO optimization, schema setup, and regular audits to rank higher on search engines.</p>
-      </div>
-      <div class="service-card">
-        <h3>🔧 Monthly Support</h3>
-        <p>Ongoing maintenance, backups, updates, and security monitoring to keep your site running smoothly.</p>
-      </div>
-      <div class="service-card">
-        <h3>🧰 Canva Design Services</h3>
-        <p>We create custom graphics, posts, banners, and creatives using Canva tailored to your brand.</p>
-      </div>
-      <div class="service-card">
-        <h3>🖌️ Logo Design</h3>
-        <p>Professional and modern logo designs that represent your brand identity effectively.</p>
-      </div>
-      <div class="service-card">
-        <h3>📣 Social Media Marketing</h3>
-        <p>Facebook & Instagram marketing services to grow your online presence and reach the right audience.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
- 
-<!-- Portfolio -->
-<section id="portfolio" class="section dark-portfolio">
-  <div class="container">
-    <h2>🧩 Our Projects</h2>
-    <div class="portfolio-grid">
-      
-      <div class="portfolio-item">
-        <img src="https://hsshngo.org/wp-content/uploads/2024/12/Logo-new--150x150.png" alt="HSSH NGO Website">
-        <div class="project-info">
-          <h3>HSSH NGO Website</h3>
-          <p>Custom WordPress site for donation management, volunteer portal & 80G receipts.</p>
-          <a href="https://hsshngo.org" target="_blank">🔗 View Project</a>
+  <!-- Hero / CTA -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h2>Professional Websites & Digital Marketing</h2>
+        <p>We craft fast, secure, and beautiful websites, modern branding and result-driven marketing so your business grows — starting from ₹5,999*</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">Get a Quote</a>
+          <a class="btn outline" href="#portfolio">View Work</a>
         </div>
       </div>
-
-      <div class="portfolio-item">
-        <img src="https://sgwfoundation.org/wp-content/uploads/2025/04/Logo-removebg-preview.png" alt="SGW Foundation Website">
-        <div class="project-info">
-          <h3>SGW Foundation</h3>
-          <p>Donation platform, campaign module, and volunteer system built in WordPress.</p>
-          <a href="https://sgwfoundation.org" target="_blank">🔗 View Project</a>
-        </div>
+      <div class="hero-right">
+        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965873.png" alt="web design" />
       </div>
-
-      <!-- Add more project items if needed -->
-
-    </div>
-  </div>
-</section>
-
-  
-
-  <!-- Contact -->
-  <section id="contact" class="section dark">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form id="contactForm" action="https://formsubmit.co/gkashu14p49@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        
-        <!-- Optional hidden settings -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://mm-services.vercel.app/thank-you.html">
-      
-        <button type="submit">Send Message</button>
-      </form>
-      <p id="formStatus" style="margin-top: 10px; color: green;"></p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 MM Services. All rights reserved.</p>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h3>About MM Services</h3>
+        <p>We deliver full-service web & marketing solutions — custom website builds, branding & creative design, SEO, ad campaigns and monthly site management.</p>
+        <ul class="bullets">
+          <li>✅ Quick turnarounds</li>
+          <li>✅ Responsive & mobile-first design</li>
+          <li>✅ Ongoing support & maintenance</li>
+        </ul>
+      </div>
+      <div class="about-media">
+        <img src="https://cdn-icons-png.flaticon.com/512/2703/2703913.png" alt="team" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section alt">
+    <div class="container">
+      <h3>Services</h3>
+      <div class="services-grid">
+        <div class="card">
+          <h4>Website Development</h4>
+          <p>Custom website builds, eCommerce & integrations, and performance improvements.</p>
+        </div>
+        <div class="card">
+          <h4>Web Design & Templates</h4>
+          <p>Modern responsive templates and landing pages for marketing & sales.</p>
+        </div>
+        <div class="card">
+          <h4>Logo & Branding</h4>
+          <p>Professional logos, brand guides & social graphics.</p>
+        </div>
+        <div class="card">
+          <h4>SEO & Content</h4>
+          <p>On-page SEO, schema, performance improvements and content strategy.</p>
+        </div>
+        <div class="card">
+          <h4>Ads & Marketing</h4>
+          <p>Facebook/Instagram ads, campaign setup & monitoring for ROI.</p>
+        </div>
+        <div class="card">
+          <h4>Monthly Support</h4>
+          <p>Backups, updates, monitoring and small changes — hassle free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h3>Portfolio</h3>
+      <p class="muted">Some recent projects — click to view live sites. (Demo logos shown.)</p>
+
+      <div class="portfolio-grid">
+        <!-- Demo item 1 -->
+        <article class="portfolio-card">
+          <div class="p-thumb"><img src="https://via.placeholder.com/300x150?text=Client+1+Logo" alt="Client 1"></div>
+          <div class="p-body">
+            <h4>Client Name 1</h4>
+            <p>Donation & volunteer features with a clean user flow.</p>
+            <a class="small-btn" href="#" target="_blank" rel="noopener">View</a>
+          </div>
+        </article>
+
+        <!-- Demo item 2 -->
+        <article class="portfolio-card">
+          <div class="p-thumb"><img src="https://via.placeholder.com/300x150?text=Client+2+Logo" alt="Client 2"></div>
+          <div class="p-body">
+            <h4>Client Name 2</h4>
+            <p>eCommerce & booking integration for local business.</p>
+            <a class="small-btn" href="#" target="_blank" rel="noopener">View</a>
+          </div>
+        </article>
+
+        <!-- Demo item 3 -->
+        <article class="portfolio-card">
+          <div class="p-thumb"><img src="https://via.placeholder.com/300x150?text=Client+3+Logo" alt="Client 3"></div>
+          <div class="p-body">
+            <h4>Client Name 3</h4>
+            <p>Corporate site with multilingual support and clean UX.</p>
+            <a class="small-btn" href="#" target="_blank" rel="noopener">View</a>
+          </div>
+        </article>
+
+        <!-- Demo item 4 -->
+        <article class="portfolio-card">
+          <div class="p-thumb"><img src="https://via.placeholder.com/300x150?text=Client+4+Logo" alt="Client 4"></div>
+          <div class="p-body">
+            <h4>Client Name 4</h4>
+            <p>Landing pages + ad funnel for a marketing campaign.</p>
+            <a class="small-btn" href="#" target="_blank" rel="noopener">View</a>
+          </div>
+        </article>
+
+        <!-- Demo item 5 -->
+        <article class="portfolio-card">
+          <div class="p-thumb"><img src="https://via.placeholder.com/300x150?text=Client+5+Logo" alt="Client 5"></div>
+          <div class="p-body">
+            <h4>Client Name 5</h4>
+            <p>Custom dashboard & automation for client operations.</p>
+            <a class="small-btn" href="#" target="_blank" rel="noopener">View</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing / CTA -->
+  <section id="pricing" class="section cta-section">
+    <div class="container cta-inner">
+      <div>
+        <h3>Ready to start?</h3>
+        <p>Small website packages starting from ₹5,999 — contact for custom quotes.</p>
+      </div>
+      <a class="btn primary" href="#contact">Request Quote</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h3>Contact</h3>
+      <form id="contactForm" action="https://formsubmit.co/gkashu14p49@gmail.com" method="POST" class="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" placeholder="Message" required></textarea>
+
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://mm-services.vercel.app/thank-you.html" />
+
+        <button type="submit" class="btn primary">Send Message</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> MM Services. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
