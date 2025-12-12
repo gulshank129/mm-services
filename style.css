@@ -68,7 +68,7 @@ body{background:linear-gradient(180deg,#071428 0%, #051026 100%);color:var(--tex
 
 /* PROJECTS GRID */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:18px}
-.project-tile{background: white, rgba(255,255,255,0.01));height:120px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;text-decoration:none;color:inherit;box-shadow:0 18px 40px rgba(2,6,23,0.6);transition:transform .2s ease}
+.project-tile{background: white;height:120px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;text-decoration:none;color:inherit;box-shadow:0 18px 40px rgba(2,6,23,0.6);transition:transform .2s ease}
 .project-tile img{max-width:85%;max-height:70%;object-fit:contain;transition:transform .25s ease}
 .project-tile:hover{transform:translateY(-6px) rotateX(1deg)}
 .project-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(2,6,23,0.55));opacity:0;display:flex;align-items:flex-end;justify-content:center;padding:10px;color:#fff;font-weight:700;border-radius:12px;transition:opacity .18s}
@@ -101,4 +101,5 @@ body{background:linear-gradient(180deg,#071428 0%, #051026 100%);color:var(--tex
   .projects-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
   .brand-text h1{font-size:0.98rem}
 }
+
 
