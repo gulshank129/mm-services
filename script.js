@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const projects = [
     { name: "HSSH NGO", logo: "https://hsshngo.org/wp-content/uploads/2024/12/Logo-new--150x150.png", url: "https://hsshngo.org" },
     { name: "SGW Foundation", logo: "https://sgwfoundation.org/wp-content/uploads/2025/04/Logo-removebg-preview.png", url: "https://sgwfoundation.org" },
-    { name: "Client 3", logo: "http://klasetu.com/wp-content/uploads/2025/07/LOGO_PNG-removebg-preview-1.png", url: "https://klasetu.com/" },
-    { name: "Client 4", logo: "https://mmgymcloud.com/wp-content/uploads/2025/09/cropped-20250911_1239_Mighty-Cloud-Logo_remix_01k4vsk0bhf2rvv7n31svm6sam-1.png", url: "https://mmgymcloud.com/" },
-    { name: "Client 5", logo: "https://theknottedgrace.com/wp-content/uploads/2025/11/cropped-tk-logo.png", url: "https://theknottedgrace.com/" }
+    { name: "Klasetu", logo: "http://klasetu.com/wp-content/uploads/2025/07/LOGO_PNG-removebg-preview-1.png", url: "https://klasetu.com/" },
+    { name: "MM GYM CLOUD", logo: "https://mmgymcloud.com/wp-content/uploads/2025/09/cropped-20250911_1239_Mighty-Cloud-Logo_remix_01k4vsk0bhf2rvv7n31svm6sam-1.png", url: "https://mmgymcloud.com/" },
+    { name: "The Knotted Grace", logo: "https://theknottedgrace.com/wp-content/uploads/2025/11/cropped-tk-logo.png", url: "https://theknottedgrace.com/" }
   ];
 
   const projectsGrid = document.getElementById('projectsGrid');
@@ -102,5 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape' && siteNav.classList.contains('show')) siteNav.classList.remove('show');
   });
 });
+
 
 
