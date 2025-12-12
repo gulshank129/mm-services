@@ -3,202 +3,228 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MM Services — Web, Design & Marketing</title>
-  <meta name="description" content="MM Services — dynamic websites, branding, SEO & marketing" />
-  <!-- Splide carousel (lightweight) & VanillaTilt -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+  <title>MM Services — Web Design, Branding & Marketing</title>
+  <meta name="description" content="MM Services — Interactive websites, logos, templates, SEO, ads & ongoing support." />
+  <!-- VanillaTilt CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js" defer></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HEADER with animated SVG logo -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-row">
       <a class="brand" href="#">
-        <!-- animated SVG logo (keeps crisp at all sizes) -->
-        <svg id="svgLogo" width="64" height="64" viewBox="0 0 100 100" aria-hidden>
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0" stop-color="#0b63ff"/>
-              <stop offset="1" stop-color="#00c2ff"/>
-            </linearGradient>
-            <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0b63ff" flood-opacity="0.12"/>
-            </filter>
-          </defs>
-          <g filter="url(#f1)">
-            <rect x="10" y="10" width="80" height="80" rx="16" fill="url(#g1)"></rect>
-            <path id="mm" d="M28 70 L40 30 L52 70 Z" fill="#fff" transform="translate(0,-6)"></path>
-            <circle cx="72" cy="28" r="8" fill="#fff" />
-          </g>
-        </svg>
-
+        <img src="logo.png" alt="MM Services" class="brand-logo" />
         <div class="brand-text">
           <h1>MM Services</h1>
-          <p>Web · Design · Marketing</p>
+          <p>Web • Design • Marketing</p>
         </div>
       </a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamb"></span></button>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamb"></span>
+      </button>
 
-      <nav class="site-nav">
+      <nav id="siteNav" class="site-nav">
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#projects">Our Projects</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO with parallax layers -->
-  <section class="hero" id="home">
-    <div class="hero-layer layer-bg"></div>
+  <!-- HERO -->
+  <section class="hero">
     <div class="container hero-inner">
       <div class="hero-left">
-        <h2 class="headline">Design-forward, conversion-first websites with wow.</h2>
-        <p class="sub">We build fast, beautiful & interactive web experiences — branding, design, ads & growth.</p>
+        <h2 class="hero-title">Interactive, conversion-focused websites — made fast.</h2>
+        <p class="hero-sub">We design premium websites, logos & marketing that drive traffic and sales. Starter packages from <strong>₹5,999</strong>.</p>
 
-        <div class="kpis">
-          <div class="kpi"><div class="kpi-number" data-target="120">0</div><div class="kpi-label">Projects</div></div>
-          <div class="kpi"><div class="kpi-number" data-target="85">0</div><div class="kpi-label">Clients</div></div>
-          <div class="kpi"><div class="kpi-number" data-target="3">0</div><div class="kpi-label">Years</div></div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn primary">Request Quote</a>
+          <a href="#projects" class="btn outline">See Our Projects</a>
         </div>
 
-        <div class="cta-row">
-          <a class="btn primary" href="#contact">Get Quote</a>
-          <a class="btn outline" href="#portfolio">View Clients</a>
+        <div class="kpis">
+          <div class="kpi"><div class="kpi-number" data-target="120">0</div><div class="kpi-label">Projects Delivered</div></div>
+          <div class="kpi"><div class="kpi-number" data-target="85">0</div><div class="kpi-label">Happy Clients</div></div>
+          <div class="kpi"><div class="kpi-number" data-target="4">0</div><div class="kpi-label">Years Running</div></div>
         </div>
       </div>
 
-      <div class="hero-right" id="heroRight">
-        <!-- 3D device mock / illustration -->
-        <div class="device-3d">
-          <img src="https://cdn-icons-png.flaticon.com/512/2965/2965873.png" alt="design" />
-          <div class="device-shadow"></div>
+      <div class="hero-right">
+        <div class="device-3d" id="device3d" title="Interactive design preview">
+          <img src="https://cdn-icons-png.flaticon.com/512/2965/2965873.png" alt="design preview" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT (expanded) -->
+  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container about-grid">
-      <div class="about-left">
+      <div class="about-main">
         <h3>About MM Services</h3>
-        <p>We’re a boutique studio focused on results: high-performing sites, brand systems and marketing that scales. Our process is simple — research, design, build, measure — so you get fast launches and continuous improvements.</p>
+        <p>We are a small, focused studio that builds high-performing websites, strong brand identities and ad creatives that convert. Our approach is practical and results-first: we design for conversions, speed and clarity — so your customers do what you want them to do.</p>
 
-        <h4>How we help</h4>
-        <ul class="about-list">
-          <li>Design & Branding: logo, identity, social templates</li>
-          <li>Interactive Sites: 3D-like UI, smooth animations, fast load</li>
-          <li>Marketing: ads, creatives, landing funnel setup</li>
-          <li>Support: monthly maintenance, updates & analytics</li>
-        </ul>
-      </div>
-
-      <div class="about-right">
-        <div class="card highlight-3d tilt" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-scale="1.02">
-          <h4>Starter Package</h4>
-          <p>3 pages, responsive design, SEO basics — ₹5,999</p>
-          <a class="small-btn" href="#contact">Request</a>
-        </div>
-
-        <div class="card contact-3d tilt" data-tilt data-tilt-max="8">
-          <h4>Let's talk</h4>
-          <p>Email: <a href="mailto:gkashu14p49@gmail.com">gkashu14p49@gmail.com</a></p>
+        <div class="about-points">
+          <div><strong>Quick launch:</strong> Starter sites in 3–7 days.</div>
+          <div><strong>Design that converts:</strong> Strategic layouts & CTAs.</div>
+          <div><strong>Full stack support:</strong> Graphics, hosting handoff & monthly care.</div>
         </div>
       </div>
+
+      <aside class="about-aside">
+        <div class="card">
+          <h4>Package highlight</h4>
+          <p><strong>Starter — ₹5,999</strong> : 3 pages, mobile-first, basic SEO, 7 days support after launch.</p>
+          <a class="small-btn" href="#contact">Request Starter</a>
+        </div>
+
+        <div class="card">
+          <h4>What we need</h4>
+          <ul>
+            <li>Reference sites</li>
+            <li>Logo (if available)</li>
+            <li>Page list & basic content</li>
+          </ul>
+        </div>
+      </aside>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section id="services" class="section alt">
     <div class="container">
-      <h3>Services</h3>
+      <h3>Services we provide</h3>
+
       <div class="services-grid">
+        <!-- many services, as requested -->
         <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Interactive Websites</h4>
-          <p>Animations, parallax, micro-interactions and 3D-feel UI to engage users.</p>
+          <h4>Custom Website Design</h4>
+          <p>Unique, responsive layouts tailored to your brand & goals.</p>
         </div>
+
         <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Branding</h4>
-          <p>Logo & identity systems that look premium across web & print.</p>
+          <h4>Landing Pages & Funnels</h4>
+          <p>High-converting landing pages for ads and lead capture.</p>
         </div>
+
         <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Ads & Creatives</h4>
-          <p>High-CTR creatives for social ads and landing funnels.</p>
+          <h4>Logo & Brand Identity</h4>
+          <p>Professional logos, color palettes & social templates.</p>
+        </div>
+
+        <div class="service tilt" data-tilt data-tilt-max="8">
+          <h4>Templates & Design Systems</h4>
+          <p>Reusable templates for faster launches and consistency.</p>
+        </div>
+
+        <div class="service tilt" data-tilt data-tilt-max="8">
+          <h4>SEO & Performance</h4>
+          <p>Speed optimisation, on-page SEO, metadata & schema setup.</p>
+        </div>
+
+        <div class="service tilt" data-tilt data-tilt-max="8">
+          <h4>Ad Creatives & Campaigns</h4>
+          <p>Ad design, copy & campaign setup for Facebook & Instagram.</p>
+        </div>
+
+        <div class="service tilt" data-tilt data-tilt-max="8">
+          <h4>Plugin / Integration</h4>
+          <p>Payment gateways, booking, forms, analytics and third-party tools.</p>
+        </div>
+
+        <div class="service tilt" data-tilt data-tilt-max="8">
+          <h4>Monthly Maintenance</h4>
+          <p>Backups, updates and small changes on request.</p>
+        </div>
+
+        <div class="service tilt" data-tilt data-tilt-max="8">
+          <h4>Content & Copywriting</h4>
+          <p>Short, conversion-focused copy for pages and ads.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO (logos as 3D cards) -->
-  <section id="portfolio" class="section">
+  <!-- PROJECTS / PORTFOLIO -->
+  <section id="projects" class="section">
     <div class="container">
-      <div class="portfolio-head">
-        <h3>Selected Client Logos</h3>
-        <p class="muted">Click a logo to open client site — click & hold for a quick preview.</p>
+      <div class="projects-head">
+        <h3>Our Projects</h3>
+        <p class="muted">Click a logo to visit the live site (opens in new tab). Only logos are shown for a clean showcase.</p>
       </div>
 
-      <div id="portfolioGrid" class="portfolio-logos">
-        <!-- generated by script.js -->
+      <div id="projectsGrid" class="projects-grid">
+        <!-- tiles injected by script.js -->
       </div>
     </div>
+  </section>
 
-    <!-- Modal for case study / preview -->
-    <div id="caseModal" class="modal" aria-hidden="true">
-      <div class="modal-inner">
-        <button class="modal-close" aria-label="Close">✕</button>
-        <div class="modal-content">
-          <div class="modal-thumb"><img id="modalImg" src="" alt=""></div>
-          <div class="modal-body">
-            <h4 id="modalTitle"></h4>
-            <p id="modalDesc"></p>
-            <a id="modalLink" class="btn primary" href="#" target="_blank" rel="noopener">Open Site</a>
-          </div>
-        </div>
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section alt">
+    <div class="container">
+      <h3>What clients say</h3>
+      <div class="testimonials-grid">
+        <blockquote class="testi">
+          <p>"Fast delivery, klare communication and great results. Conversion improved after the redesign."</p>
+          <cite>— Asha, NGO</cite>
+        </blockquote>
+
+        <blockquote class="testi">
+          <p>"Excellent creatives for ads — CTR went up 38% in two weeks."</p>
+          <cite>— Sameer, Retail</cite>
+        </blockquote>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section contact-section alt">
-    <div class="container">
-      <h3>Contact</h3>
-      <div class="contact-grid">
+  <section id="contact" class="section contact-section">
+    <div class="container contact-grid">
+      <div class="contact-left">
+        <h3>Get in touch</h3>
+        <p>Send brief, links and budget — we’ll reply with timeline & cost.</p>
+
         <form id="contactForm" action="https://formsubmit.co/gkashu14p49@gmail.com" method="POST" class="contact-form">
-          <input name="name" placeholder="Name" required />
+          <input name="name" placeholder="Your name" required />
           <input name="email" type="email" placeholder="Email" required />
-          <input name="subject" placeholder="Project / Subject" />
-          <textarea name="message" placeholder="Project details" required></textarea>
+          <input name="phone" placeholder="Phone (optional)" />
+          <input name="subject" placeholder="Subject / Project title" />
+          <textarea name="message" placeholder="Project details & deadline" required></textarea>
 
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_next" value="https://mm-services.vercel.app/thank-you.html" />
 
           <button type="submit" class="btn primary">Send Request</button>
-          <p id="formStatus" class="form-status"></p>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
         </form>
-
-        <aside class="contact-aside">
-          <div class="card">
-            <h4>Send</h4>
-            <p>Links, brief, logo (if available) & budget — we'll reply with timeline & cost.</p>
-          </div>
-        </aside>
       </div>
+
+      <aside class="contact-right">
+        <div class="card">
+          <h4>Quick details</h4>
+          <ul>
+            <li>Typical delivery: 3–14 days (depends on scope)</li>
+            <li>Payment: 50% advance, rest on delivery (flexible)</li>
+            <li>Support: 7 days free support on launch</li>
+          </ul>
+        </div>
+      </aside>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <p>&copy; <span id="year"></span> MM Services</p>
+      <p>&copy; <span id="year"></span> MM Services — All rights reserved.</p>
       <p class="muted small">Logos shown with permission.</p>
     </div>
   </footer>
 
-  <!-- scripts: Splide and VanillaTilt (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
