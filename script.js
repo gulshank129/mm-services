@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // Projects data (edit filenames/URLs as needed)
   const projects = [
     { name: "HSSH NGO", logo: "https://hsshngo.org/wp-content/uploads/2024/12/Logo-new--150x150.png", url: "https://hsshngo.org" },
-    { name: "SGW Foundation", logo: "clients/sgw-logo.png", url: "https://sgwfoundation.org" },
-    { name: "Client 3", logo: "clients/client3.png", url: "#" },
-    { name: "Client 4", logo: "clients/client4.png", url: "#" },
-    { name: "Client 5", logo: "clients/client5.png", url: "#" }
+    { name: "SGW Foundation", logo: "https://sgwfoundation.org/wp-content/uploads/2025/04/Logo-removebg-preview.png", url: "https://sgwfoundation.org" },
+    { name: "Client 3", logo: "http://klasetu.com/wp-content/uploads/2025/07/LOGO_PNG-removebg-preview-1.png", url: "https://klasetu.com/" },
+    { name: "Client 4", logo: "https://mmgymcloud.com/wp-content/uploads/2025/09/cropped-20250911_1239_Mighty-Cloud-Logo_remix_01k4vsk0bhf2rvv7n31svm6sam-1.png", url: "https://mmgymcloud.com/" },
+    { name: "Client 5", logo: "https://theknottedgrace.com/wp-content/uploads/2025/11/cropped-tk-logo.png", url: "https://theknottedgrace.com/" }
   ];
 
   const projectsGrid = document.getElementById('projectsGrid');
@@ -102,4 +102,5 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape' && siteNav.classList.contains('show')) siteNav.classList.remove('show');
   });
 });
+
 
