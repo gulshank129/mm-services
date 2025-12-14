@@ -78,33 +78,29 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       name: "Hum Saath Saath Hain",
       type: "NGO",
-      image: "https://hsshngo.org/wp-content/uploads/2024/12/Logo-new--150x150.png"
+      image: "hssh.png"
     },
     {
       name: "Klasetu E-commerce",
       type: "E-commerce Platform",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=225&fit=crop&crop=center"
+      image: "Klasetu.png"
     },
     {
-      name: "FinTech Dashboard",
-      type: "Web Application",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w-400&h=225&fit=crop&crop=center"
+      name: "SGWF",
+      type: "NGO",
+      image: "SGWF.png"
     },
     {
-      name: "HealthCare App",
-      type: "Mobile Interface",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=225&fit=crop&crop=center"
+      name: "MM GYM CLOUD",
+      type: "Gym Management Web App",
+      image: "MM GYM CLOUD.png"
     },
     {
-      name: "Restaurant Branding",
-      type: "Brand Identity",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=225&fit=crop&crop=center"
-    },
-    {
-      name: "Travel Portal",
-      type: "Booking System",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=225&fit=crop&crop=center"
+      name: "The Knotted Grace",
+      type: "E-Commerce",
+      image: "The Knotted Grace.png"
     }
+   
   ];
 
   if (projectsGrid) {
@@ -283,4 +279,5 @@ if (brand) {
     brand.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
   });
 }
+
 
