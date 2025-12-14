@@ -290,7 +290,7 @@ function sendToWhatsApp(e) {
   const message = form.message.value;
   
   // Your WhatsApp number (91 = India code)
-  const whatsappNumber = "919999999999"; // अपना number डालो
+  const whatsappNumber = "9622337107"; // अपना number डालो
   
   // Message format
   const whatsappMessage = 
@@ -318,5 +318,6 @@ function sendToWhatsApp(e) {
   
   return false;
 }
+
 
 
