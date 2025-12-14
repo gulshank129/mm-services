@@ -188,7 +188,7 @@
         <h3>Get in touch</h3>
         <p>Send brief, links and budget — we’ll reply with timeline & cost.</p>
 
-        <form id="contactForm" action="https://formsubmit.co/gkashu14p49@gmail.com" method="POST" class="contact-form">
+      <form id="contactForm" onsubmit="sendToWhatsApp(event)">
           <input name="name" placeholder="Your name" required />
           <input name="email" type="email" placeholder="Email" required />
           <input name="phone" placeholder="Phone (optional)" />
@@ -220,12 +220,13 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <p>&copy; <span id="year"></span> MM Services — All rights reserved.</p>
-      <p class="muted small">Logos shown with permission.</p>
+      
     </div>
   </footer>
 
   <script src="script.js" defer></script>
 </body>
 </html>
+
 
 
