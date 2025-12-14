@@ -279,5 +279,44 @@ if (brand) {
     brand.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
   });
 }
+function sendToWhatsApp(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const name = form.name.value;
+  const email = form.email.value;
+  const phone = form.phone.value;
+  const subject = form.subject.value;
+  const message = form.message.value;
+  
+  // Your WhatsApp number (91 = India code)
+  const whatsappNumber = "919999999999"; // अपना number डालो
+  
+  // Message format
+  const whatsappMessage = 
+    `*New Project Inquiry*%0A%0A` +
+    `*Name:* ${name}%0A` +
+    `*Email:* ${email}%0A` +
+    `*Phone:* ${phone}%0A` +
+    `*Subject:* ${subject}%0A` +
+    `*Message:* ${message}%0A%0A` +
+    `Sent from MM Services Website`;
+  
+  // WhatsApp URL
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  
+  // Open WhatsApp
+  window.open(whatsappURL, '_blank');
+  
+  // Show success message
+  const formStatus = document.getElementById('formStatus');
+  formStatus.textContent = 'Opening WhatsApp... Please send the message!';
+  formStatus.className = 'form-status success';
+  
+  // Reset form
+  form.reset();
+  
+  return false;
+}
 
 
