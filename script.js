@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const projectsGrid = document.getElementById('projectsGrid');
   const projects = [
     {
-      name: "HSSH NGO",
-      type: "Website & Branding",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=225&fit=crop&crop=center"
+      name: "Hum Saath Saath Hain",
+      type: "NGO",
+      image: "https://hsshngo.org/wp-content/uploads/2024/12/Logo-new--150x150.png"
     },
     {
       name: "Klasetu E-commerce",
@@ -283,3 +283,4 @@ if (brand) {
     brand.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
   });
 }
+
