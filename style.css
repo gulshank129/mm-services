@@ -74,9 +74,9 @@ body {
 .brand-logo {
     height: 64px;
     width:auto;
-    border-radius: 20px;
+    border-radius: 10px;
     background: linear-gradient(135deg, #0b63ff 0%, #00c2ff 100%);
-    padding: 8px;
+    padding: 3px;
     box-shadow: 0 8px 24px rgba(11, 99, 255, 0.3);
 }
 
@@ -1092,4 +1092,5 @@ body {
         min-width: 100%;
     }
 }
+
 
