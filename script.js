@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       name: "The Knotted Grace",
       type: "E-Commerce",
-      image: "The Knotted Grace.png"
+      image: "Knotted.png"
     }
    
   ];
@@ -318,6 +318,7 @@ function sendToWhatsApp(e) {
   
   return false;
 }
+
 
 
 
