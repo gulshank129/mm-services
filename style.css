@@ -936,10 +936,10 @@ body {
     align-items: center;        /* 👈 vertical center */
     width: 100%;
   }
-  .hero-right {
+  /* .hero-right {
     order: -1;
     margin-bottom: 40px;
-  }
+  } */
   
   .hero-title::after {
     left: 50%;
@@ -1045,12 +1045,7 @@ body {
   .contact-form textarea {
     padding: 16px;
   }
-  .hero-right {
-    display: flex;              /* 👈 IMPORTANT */
-    justify-content: center;    /* 👈 horizontal center */
-    align-items: center;        /* 👈 vertical center */
-    width: 100%;
-  }
+ 
 }
 
 @media (max-width: 480px) {
@@ -1103,6 +1098,7 @@ body {
     min-width: 100%;
   }
 }
+
 
 
 
