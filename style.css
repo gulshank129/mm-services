@@ -930,7 +930,12 @@ body {
     flex: none;
     width: 100%;
   }
-  
+  .hero-right {
+    display: flex;              /* 👈 IMPORTANT */
+    justify-content: center;    /* 👈 horizontal center */
+    align-items: center;        /* 👈 vertical center */
+    width: 100%;
+  }
   .hero-right {
     order: -1;
     margin-bottom: 40px;
@@ -1092,6 +1097,7 @@ body {
     min-width: 100%;
   }
 }
+
 
 
 
