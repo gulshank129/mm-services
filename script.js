@@ -78,27 +78,32 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       name: "Hum Saath Saath Hain",
       type: "NGO",
-      image: "hssh.png"
+      image: "hssh.png",
+      url: "https://hsshngo.org"
     },
     {
       name: "Klasetu E-commerce",
       type: "E-commerce Platform",
-      image: "Klasetu.png"
+      image: "Klasetu.png",
+      url: "https://klasetu.com"
     },
     {
       name: "SGWF",
       type: "NGO",
-      image: "SGWF.png"
+      image: "SGWF.png",
+      url: "https://sgwfoundation.org"
     },
     {
       name: "MM GYM CLOUD",
       type: "Gym Management Web App",
-      image: "MM GYM CLOUD.png"
+      image: "MM GYM CLOUD.png",
+      url: "https://mmgymcloud.com"
     },
     {
       name: "The Knotted Grace",
       type: "E-Commerce",
-      image: "Knotted.png"
+      image: "Knotted.png",
+      url: "https://theknottedgrace.com"
     }
    
   ];
@@ -318,6 +323,7 @@ function sendToWhatsApp(e) {
   
   return false;
 }
+
 
 
 
