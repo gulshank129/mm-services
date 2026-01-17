@@ -923,6 +923,7 @@ body {
   .hero-inner {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
   }
   
   .hero-left,
@@ -930,16 +931,11 @@ body {
     flex: none;
     width: 100%;
   }
+ 
   .hero-right {
-    display: flex;              /* 👈 IMPORTANT */
-    justify-content: center;    /* 👈 horizontal center */
-    align-items: center;        /* 👈 vertical center */
-    width: 100%;
-  }
-  /* .hero-right {
     order: -1;
     margin-bottom: 40px;
-  } */
+  }
   
   .hero-title::after {
     left: 50%;
@@ -1098,6 +1094,7 @@ body {
     min-width: 100%;
   }
 }
+
 
 
 
