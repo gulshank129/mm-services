@@ -923,7 +923,7 @@ body {
   .hero-inner {
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    
   }
   
   .hero-left,
@@ -1094,6 +1094,7 @@ body {
     min-width: 100%;
   }
 }
+
 
 
 
