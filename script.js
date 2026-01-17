@@ -111,7 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (projectsGrid) {
     projects.forEach(project => {
       const tile = document.createElement('a');
-      tile.href = '#';
+     tile.href = project.url;
+  tile.target = '_blank';
+  tile.rel = 'noopener noreferrer';
       tile.className = 'project-tile';
       tile.setAttribute('data-tilt', '');
       tile.setAttribute('data-tilt-max', '10');
@@ -323,6 +325,7 @@ function sendToWhatsApp(e) {
   
   return false;
 }
+
 
 
 
