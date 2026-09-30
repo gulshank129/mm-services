@@ -59,6 +59,9 @@ html {
   scroll-padding-top: 90px;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,18 +69,31 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-main);
   line-height: 1.6;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
 }
 
-/* Ambient glow orbs */
+/* Ambient glow orbs container (strictly hardware clipped) */
+.glow-orb-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  contain: strict;
+}
+
 .glow-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
   pointer-events: none;
-  z-index: 0;
   opacity: 0.45;
 }
 
@@ -776,11 +792,14 @@ a {
    TICKER / MARQUEE SECTION
    ========================================================================== */
 .clients-ticker-section {
+  width: 100%;
+  max-width: 100%;
   padding: 2.2rem 0;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
   background: rgba(12, 16, 23, 0.6);
   overflow: hidden;
+  contain: paint;
   position: relative;
   z-index: 1;
 }
@@ -796,8 +815,12 @@ a {
 }
 
 .ticker-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   display: flex;
   overflow: hidden;
+  contain: paint;
   mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
@@ -1552,6 +1575,8 @@ a {
 .contact-details {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .contact-details .label {
@@ -1562,8 +1587,10 @@ a {
 }
 
 .contact-details strong {
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   color: #ffffff;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* Contact Form Card */
@@ -1930,17 +1957,17 @@ a {
     font-size: 1.6rem;
   }
 
+  .header-actions .btn-glow {
+    display: none;
+  }
+
   /* Hero Window Card Header on Mobile */
   .window-bar {
     padding: 0.65rem 0.9rem;
   }
 
   .window-search {
-    max-width: 140px;
-    font-size: 0.7rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    display: none;
   }
 
   .visual-body {
