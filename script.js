@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. Portfolio Filtering System
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const projectCards = document.querySelectorAll('.compact-project-card, .project-card');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
