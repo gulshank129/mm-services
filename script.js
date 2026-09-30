@@ -1,333 +1,232 @@
-// DOM Ready
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize VanillaTilt for 3D effects
-  if (typeof VanillaTilt !== 'undefined') {
-    VanillaTilt.init(document.querySelectorAll('.tilt'), {
-      max: 8,
-      speed: 400,
-      glare: true,
-      'max-glare': 0.2,
-      scale: 1.05
-    });
+/**
+ * M&M Services — Modern Interactive Scripts
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Current Year in Footer
+  const yearElement = document.getElementById('currentYear');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
   }
 
-  // Animated Counter for KPIs
-  const counters = document.querySelectorAll('.kpi-number');
-  const speed = 200;
+  // 2. Mobile Navigation Drawer Toggle
+  const mobileToggle = document.getElementById('mobileNavToggle');
+  const mobileDrawer = document.getElementById('mobileDrawer');
 
-  const animateCounter = (counter) => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const increment = target / speed;
-
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(() => animateCounter(counter), 1);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  // Intersection Observer for counters
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        animateCounter(counter);
-        observer.unobserve(counter);
-      }
-    });
-  }, observerOptions);
-
-  counters.forEach(counter => observer.observe(counter));
-
-  // Mobile Navigation Toggle
-  const navToggle = document.getElementById('navToggle');
-  const siteNav = document.getElementById('siteNav');
-
-  if (navToggle && siteNav) {
-    navToggle.addEventListener('click', () => {
-      siteNav.classList.toggle('show');
-      navToggle.classList.toggle('active');
+  if (mobileToggle && mobileDrawer) {
+    mobileToggle.addEventListener('click', () => {
+      const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileDrawer.classList.toggle('open');
+      mobileToggle.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.site-nav a').forEach(link => {
+    // Close mobile drawer when clicking any link
+    document.querySelectorAll('.drawer-link, .drawer-btn').forEach(link => {
       link.addEventListener('click', () => {
-        siteNav.classList.remove('show');
-        navToggle.classList.remove('active');
+        mobileDrawer.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
 
-  // Current Year in Footer
-  const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-
-  // Dynamic Projects Grid
-  const projectsGrid = document.getElementById('projectsGrid');
-  const projects = [
-    {
-      name: "Hum Saath Saath Hain",
-      type: "NGO",
-      image: "hssh.png",
-      url: "https://hsshngo.org"
-    },
-    {
-      name: "Klasetu E-commerce",
-      type: "E-commerce Platform",
-      image: "Klasetu.png",
-      url: "https://klasetu.com"
-    },
-    {
-      name: "SGWF",
-      type: "NGO",
-      image: "SGWF.png",
-      url: "https://sgwfoundation.org"
-    },
-    {
-      name: "MM GYM CLOUD",
-      type: "Gym Management Web App",
-      image: "MM GYM CLOUD.png",
-      url: "https://mmgymcloud.com"
-    },
-    {
-      name: "The Knotted Grace",
-      type: "E-Commerce",
-      image: "Knotted.png",
-      url: "https://theknottedgrace.com"
+  // 3. Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      navbar.style.background = 'rgba(7, 9, 14, 0.95)';
+      navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.12)';
+    } else {
+      navbar.style.background = 'rgba(7, 9, 14, 0.82)';
+      navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.07)';
     }
-   
-  ];
-
-  if (projectsGrid) {
-    projects.forEach(project => {
-      const tile = document.createElement('a');
-     tile.href = project.url;
-  tile.target = '_blank';
-  tile.rel = 'noopener noreferrer';
-      tile.className = 'project-tile';
-      tile.setAttribute('data-tilt', '');
-      tile.setAttribute('data-tilt-max', '10');
-      
-      tile.innerHTML = `
-        <img src="${project.image}" alt="${project.name}" loading="lazy">
-        <div class="project-overlay">
-          <h4>${project.name}</h4>
-          <p>${project.type}</p>
-        </div>
-      `;
-      
-      projectsGrid.appendChild(tile);
-    });
-    
-    // Re-initialize tilt for new elements
-    if (typeof VanillaTilt !== 'undefined') {
-      VanillaTilt.init(document.querySelectorAll('.project-tile'), {
-        max: 10,
-        speed: 300,
-        glare: true,
-        'max-glare': 0.15
-      });
-    }
-  }
-
-  // Form Submission with Animation
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      
-      // Show loading state
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
-      
-      try {
-        // Simulate API call (replace with actual FormSubmit.co)
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Show success message
-        formStatus.textContent = 'Message sent successfully! We\'ll get back to you soon.';
-        formStatus.className = 'form-status success';
-        
-        // Reset form
-        this.reset();
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          formStatus.textContent = '';
-          formStatus.className = 'form-status';
-        }, 5000);
-      } catch (error) {
-        // Show error message
-        formStatus.textContent = 'Oops! Something went wrong. Please try again.';
-        formStatus.className = 'form-status error';
-      } finally {
-        // Reset button
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }
-    });
-  }
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      
-      if (href === '#') return;
-      
-      e.preventDefault();
-      const targetElement = document.querySelector(href);
-      
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
-        });
-      }
-    });
   });
 
-  // Parallax effect for hero device
-  const device3d = document.getElementById('device3d');
-  
-  if (device3d) {
-    window.addEventListener('mousemove', (e) => {
-      const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-      const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-      
-      device3d.style.transform = `
-        rotateY(${xAxis}deg)
-        rotateX(${yAxis}deg)
-        translateZ(20px)
-      `;
-    });
-  }
+  // 4. KPI Stat Counters with IntersectionObserver
+  const counterElements = document.querySelectorAll('.counter');
+  let countersAnimated = false;
 
-  // Add scroll animations
-  const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.service, .project-tile, .testi, .card');
-    
-    elements.forEach(element => {
-      const elementTop = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      
-      if (elementTop < windowHeight * 0.85) {
-        element.style.animation = 'slideUp 0.6s ease forwards';
-      }
+  const animateCounters = () => {
+    counterElements.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const duration = 1600; // ms
+      const startTime = performance.now();
+
+      const step = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Easing out function
+        const easeOutQuad = 1 - Math.pow(1 - progress, 3);
+        const currentCount = Math.floor(easeOutQuad * target);
+
+        counter.textContent = currentCount;
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          counter.textContent = target;
+        }
+      };
+
+      requestAnimationFrame(step);
     });
   };
 
-  // Initial animation check
-  animateOnScroll();
-  
-  // Check on scroll
-  window.addEventListener('scroll', animateOnScroll);
+  const statsSection = document.querySelector('.hero-stats');
+  if (statsSection) {
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersAnimated) {
+          countersAnimated = true;
+          animateCounters();
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
 
-  // Add hover effect to services
-  document.querySelectorAll('.service').forEach(service => {
-    service.addEventListener('mouseenter', () => {
-      service.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    service.addEventListener('mouseleave', () => {
-      service.style.transform = 'translateY(0) scale(1)';
+    statsObserver.observe(statsSection);
+  }
+
+  // 5. Portfolio Filtering System
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toggle active state
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (filterValue === 'all' || cardCategory === filterValue) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+          }, 20);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 200);
+        }
+      });
     });
   });
 
-  // Add loading animation
-  window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-      document.body.style.opacity = '1';
-    }, 100);
+  // 6. FAQ Accordion
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const currentItem = header.parentElement;
+      const content = currentItem.querySelector('.accordion-content');
+      const isAlreadyActive = currentItem.classList.contains('active');
+
+      // Close all other accordion items
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.accordion-content').style.maxHeight = null;
+        item.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+      });
+
+      // If clicked item wasn't open, open it
+      if (!isAlreadyActive) {
+        currentItem.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Open first FAQ by default
+  if (accordionHeaders.length > 0) {
+    const firstItem = accordionHeaders[0].parentElement;
+    const firstContent = firstItem.querySelector('.accordion-content');
+    firstItem.classList.add('active');
+    accordionHeaders[0].setAttribute('aria-expanded', 'true');
+    firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
+  }
+
+  // 7. Active Nav Link on Scroll (Spy Scroll)
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    const scrollPos = window.scrollY + 120;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        currentId = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentId}`) {
+        link.classList.add('active');
+      }
+    });
   });
 });
 
-// Add 3D hover effect to header brand
-const brand = document.querySelector('.brand');
-if (brand) {
-  brand.addEventListener('mousemove', (e) => {
-    const rect = brand.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    
-    const rotateY = (x - centerX) / 25;
-    const rotateX = (centerY - y) / 25;
-    
-    brand.style.transform = `
-      perspective(1000px)
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-      translateZ(10px)
-    `;
-  });
-  
-  brand.addEventListener('mouseleave', () => {
-    brand.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
-  });
-}
-function sendToWhatsApp(e) {
+/**
+ * Handle Contact Form submission & redirect to WhatsApp
+ */
+function handleFormSubmit(e) {
   e.preventDefault();
-  
+
   const form = e.target;
-  const name = form.name.value;
-  const email = form.email.value;
-  const phone = form.phone.value;
-  const subject = form.subject.value;
-  const message = form.message.value;
-  
-  // Your WhatsApp number (91 = India code)
-  const whatsappNumber = "9622337107"; // अपना number डालो
-  
-  // Message format
-  const whatsappMessage = 
-    `*New Project Inquiry*%0A%0A` +
-    `*Name:* ${name}%0A` +
-    `*Email:* ${email}%0A` +
-    `*Phone:* ${phone}%0A` +
-    `*Subject:* ${subject}%0A` +
-    `*Message:* ${message}%0A%0A` +
-    `Sent from MM Services Website`;
-  
-  // WhatsApp URL
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-  
-  // Open WhatsApp
-  window.open(whatsappURL, '_blank');
-  
-  // Show success message
+  const submitBtn = document.getElementById('submitBtn');
   const formStatus = document.getElementById('formStatus');
-  formStatus.textContent = 'Opening WhatsApp... Please send the message!';
+
+  const name = form.name.value.trim();
+  const phone = form.phone.value.trim();
+  const email = form.email.value.trim() || 'Not specified';
+  const service = form.service.value;
+  const message = form.message.value.trim();
+
+  if (!name || !phone || !message) {
+    formStatus.textContent = 'Please fill out all required fields (*).';
+    formStatus.className = 'form-status error';
+    return false;
+  }
+
+  // M&M Services WhatsApp Number
+  const whatsappNumber = '919622337107';
+
+  // Format message for WhatsApp
+  const formattedMsg = 
+    `*🚀 New Project Inquiry — M&M Services*\n\n` +
+    `*Name:* ${name}\n` +
+    `*Phone:* ${phone}\n` +
+    `*Email:* ${email}\n` +
+    `*Service Requested:* ${service}\n\n` +
+    `*Project Details:*\n${message}\n\n` +
+    `_Sent via mm-services.vercel.app_`;
+
+  const waURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMsg)}`;
+
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<span>Connecting to WhatsApp...</span>';
+  formStatus.textContent = 'Redirecting to WhatsApp with your details...';
   formStatus.className = 'form-status success';
-  
-  // Reset form
-  form.reset();
-  
+
+  setTimeout(() => {
+    window.open(waURL, '_blank');
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<span>Send via WhatsApp &rarr;</span>';
+    formStatus.textContent = 'Message prepared! If WhatsApp didn’t open, click the button again or use the floating button.';
+    form.reset();
+  }, 600);
+
   return false;
 }
-
-
-
-
-
-

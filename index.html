@@ -1,308 +1,960 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>M&M Services — Web Design, Branding & Marketing</title>
-   <!-- Favicon & Site Identity -->
-  <link rel="icon" href="MM LOGO.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="MM-LOGO.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Open Graph Tags (Social Media) -->
-  <meta property="og:title" content="M&M Services — Web Design, Branding & Marketing">
-  <meta property="og:description" content="Interactive websites, logos, templates, SEO, ads & ongoing support.">
-  <meta property="og:image" content="https://mm-services.vercel.app/MM LOGO.jpeg">
-  <meta property="og:url" content="https://mm-services.vercel.app">
-  <meta property="og:type" content="website">
-  
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="M&M Services — Web Design, Branding & Marketing">
-  <meta name="twitter:description" content="Interactive websites, logos, templates, SEO, ads & ongoing support.">
-  <meta name="twitter:image" content="https://mm-services.vercel.app/MM-LOGO.jpg">
+  <!-- Primary SEO -->
+  <title>M&M Services — Modern Web Design, Custom Development & Digital Growth</title>
+  <meta name="title" content="M&M Services — Modern Web Design, Custom Development & Digital Growth" />
+  <meta name="description" content="High-impact websites, full-stack web apps, e-commerce stores and brand identities built for growth. Fast turnaround, modern aesthetics, and conversion-first engineering." />
+  <meta name="keywords" content="M&M Services, web development, web design, e-commerce, custom web apps, Jammu web designer, India web agency, website redesign, digital marketing" />
+  <meta name="author" content="M&M Services" />
+  <meta name="theme-color" content="#07090e" />
 
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js" defer></script>
+  <!-- Favicon & Site Identity -->
+  <link rel="icon" href="MM LOGO.jpeg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="MM-LOGO.jpg" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mm-services.vercel.app/" />
+  <meta property="og:title" content="M&M Services — Modern Web Design, Custom Development & Digital Growth" />
+  <meta property="og:description" content="We build fast, conversion-focused websites and high-end digital brands. Explore our live client projects and launch your site in 3–7 days." />
+  <meta property="og:image" content="https://mm-services.vercel.app/MM%20LOGO.jpeg" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://mm-services.vercel.app/" />
+  <meta name="twitter:title" content="M&M Services — Modern Web Design & Development" />
+  <meta name="twitter:description" content="Interactive websites, custom web apps & high-converting brand design. Starter packages from ₹5,999." />
+  <meta name="twitter:image" content="https://mm-services.vercel.app/MM-LOGO.jpg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="#">
-        <img src="MM LOGO.jpeg" alt="M&M Services" class="brand-logo" />
-        <div class="brand-text">
-          <h1>M&M Services</h1>
-          <p>Web • Design • Marketing</p>
+  <!-- Ambient background glow spots -->
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      <a href="#" class="brand">
+        <div class="logo-wrapper">
+          <img src="MM LOGO.jpeg" alt="M&M Services Logo" class="brand-logo" />
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">M&amp;M <span class="gradient-text">Services</span></span>
+          <span class="brand-sub">Studio &bull; Code &bull; Growth</span>
         </div>
       </a>
 
-      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamb"></span>
-      </button>
-
-      <nav id="siteNav" class="site-nav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Our Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktopNav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Our Work</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
       </nav>
+
+      <div class="header-actions">
+        <div class="status-badge" title="Open for select client projects">
+          <span class="pulse-dot"></span>
+          <span>Available for Projects</span>
+        </div>
+        <a href="#contact" class="btn btn-sm btn-glow">Get a Quote</a>
+
+        <!-- Mobile hamburger -->
+        <button id="mobileNavToggle" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-links">
+        <a href="#about" class="drawer-link">About Us</a>
+        <a href="#services" class="drawer-link">Services</a>
+        <a href="#projects" class="drawer-link">Featured Work</a>
+        <a href="#process" class="drawer-link">How We Work</a>
+        <a href="#pricing" class="drawer-link">Pricing Plans</a>
+        <a href="#testimonials" class="drawer-link">Client Reviews</a>
+        <a href="#contact" class="btn btn-primary drawer-btn">Start a Project</a>
+      </div>
+      <div class="drawer-footer">
+        <a href="https://wa.me/919622337107" target="_blank" rel="noopener noreferrer" class="drawer-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Chat directly on WhatsApp
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-left">
-        <h2 class="hero-title">Interactive, conversion-focused websites — made fast.</h2>
-        <p class="hero-sub">We design premium websites, logos & marketing that drive traffic and sales. Starter packages from <strong>₹5,999</strong>.</p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn primary">Request Quote</a>
-          <a href="#projects" class="btn outline">See Our Projects</a>
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-layout">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="pill-spark">✨</span>
+          <span>Next-Gen Web Design &amp; Digital Studio</span>
+          <span class="pill-arrow">&rarr;</span>
         </div>
 
-        <div class="kpis">
-          <div class="kpi"><div class="kpi-number" data-target="5">0</div><div class="kpi-label">Projects Delivered</div></div>
-          <div class="kpi"><div class="kpi-number" data-target="5">0</div><div class="kpi-label">Happy Clients</div></div>
-          <div class="kpi"><div class="kpi-number" data-target="1">0</div><div class="kpi-label">Years Running</div></div>
+        <h1 class="hero-title">
+          We design &amp; engineer <span class="gradient-text">high-converting</span> websites that scale your business.
+        </h1>
+
+        <p class="hero-subtitle">
+          Stop losing clients to outdated, slow websites. From bespoke responsive platforms and dynamic e-commerce to branding &amp; marketing funnels &mdash; delivered in days, built to perform.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <span>Start Your Project</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+
+          <a href="https://wa.me/919622337107?text=Hi%20M%26M%20Services,%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg btn-wa">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp Us</span>
+          </a>
+        </div>
+
+        <!-- Metric Badges -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-value"><span class="counter" data-target="15">0</span>+</div>
+            <div class="stat-label">Projects Shipped</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-value"><span class="counter" data-target="100">0</span>%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-value">3-7<span class="stat-unit">days</span></div>
+            <div class="stat-label">Average Delivery</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-value">₹5.9k<span class="stat-unit">+</span></div>
+            <div class="stat-label">Packages From</div>
+          </div>
         </div>
       </div>
 
-      <div class="hero-right">
-        <div class="device-3d" id="device3d" title="Interactive design preview">
-       <svg width="420" height="300"
-     viewBox="0 0 420 300"
-     xmlns="http://www.w3.org/2000/svg"
-     preserveAspectRatio="xMidYMid meet"
-     style="display:block; max-width:100%; height:auto;">
+      <!-- Hero Visual Device Frame -->
+      <div class="hero-visual">
+        <div class="visual-glass-card">
+          <div class="window-bar">
+            <div class="window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="window-search">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span>mm-services.vercel.app &mdash; live production</span>
+            </div>
+            <div class="window-status"><span class="badge-live">200 OK</span></div>
+          </div>
 
-  <defs>
-    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b63ff"/>
-      <stop offset="100%" stop-color="#00c2ff"/>
-    </linearGradient>
+          <div class="visual-body">
+            <div class="mockup-header">
+              <div class="mockup-title-area">
+                <span class="tag-accent">Featured Live Platforms</span>
+                <h3>Engineered for High Performance</h3>
+              </div>
+              <div class="score-badge">
+                <div class="score-num">99</div>
+                <div class="score-text">Performance Score</div>
+              </div>
+            </div>
 
-    <filter id="screenGlow">
-      <feGaussianBlur stdDeviation="15"/>
-    </filter>
-  </defs>
+            <!-- Mini Showcase Grid -->
+            <div class="mockup-cards">
+              <a href="https://jammusportsclub.com" target="_blank" rel="noopener noreferrer" class="mini-project-chip">
+                <div class="chip-icon sports">🏏</div>
+                <div class="chip-text">
+                  <strong>Jammu Sports Club</strong>
+                  <span>Multi-Sport Academy &amp; Booking</span>
+                </div>
+                <span class="chip-link">&rarr;</span>
+              </a>
 
-  <!-- 🔑 FIX: shift content LEFT -->
-  <g transform="translate(-50, 0)">
-    <rect x="70" y="20" width="280" height="180" rx="20"
-          fill="url(#screenGrad)" opacity="0.25" filter="url(#screenGlow)"/>
+              <a href="https://klasetu.com" target="_blank" rel="noopener noreferrer" class="mini-project-chip">
+                <div class="chip-icon ecom">🛍️</div>
+                <div class="chip-text">
+                  <strong>Klasetu E-Commerce</strong>
+                  <span>Online Store &amp; Catalog</span>
+                </div>
+                <span class="chip-link">&rarr;</span>
+              </a>
 
-    <rect x="80" y="30" width="260" height="160" rx="14"
-          fill="#0f1724"/>
+              <a href="https://mmgymcloud.com" target="_blank" rel="noopener noreferrer" class="mini-project-chip">
+                <div class="chip-icon gym">💪</div>
+                <div class="chip-text">
+                  <strong>MM GYM CLOUD</strong>
+                  <span>SaaS Membership Software</span>
+                </div>
+                <span class="chip-link">&rarr;</span>
+              </a>
 
-    <rect x="80" y="30" width="260" height="32" rx="14"
-          fill="url(#screenGrad)"/>
+              <a href="https://hsshngo.org" target="_blank" rel="noopener noreferrer" class="mini-project-chip">
+                <div class="chip-icon ngo">🤝</div>
+                <div class="chip-text">
+                  <strong>Hum Saath Saath Hain</strong>
+                  <span>NGO &amp; Volunteer Portal</span>
+                </div>
+                <span class="chip-link">&rarr;</span>
+              </a>
+            </div>
 
-    <circle cx="100" cy="46" r="4" fill="#fff"/>
-    <circle cx="114" cy="46" r="4" fill="#fff" opacity="0.7"/>
-    <circle cx="128" cy="46" r="4" fill="#fff" opacity="0.4"/>
-
-    <rect x="100" y="80" width="200" height="10" rx="5" fill="rgba(255,255,255,0.15)"/>
-    <rect x="100" y="100" width="170" height="10" rx="5" fill="rgba(255,255,255,0.12)"/>
-    <rect x="100" y="120" width="190" height="10" rx="5" fill="rgba(255,255,255,0.1)"/>
-
-    <rect x="150" y="145" width="120" height="26" rx="13" fill="url(#screenGrad)"/>
-
-    <rect x="50" y="200" width="320" height="22" rx="10" fill="#0b0f1a"/>
-    <rect x="170" y="200" width="80" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
-  </g>
-</svg>
-
-
-
+            <div class="visual-footer">
+              <div class="tech-tags">
+                <span class="tech-pill">Next.js / HTML5</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">Speed Optimized</span>
+                <span class="tech-pill">SEO Ready</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container about-grid">
-      <div class="about-main">
-        <h3>About M&M Services</h3>
-        <p>We are a small, focused studio that builds high-performing websites, strong brand identities and ad creatives that convert. Our approach is practical and results-first: we design for conversions, speed and clarity — so your customers do what you want them to do.</p>
-
-        <div class="about-points">
-          <div><strong>Quick launch:</strong> Starter sites in 3–7 days.</div>
-          <div><strong>Design that converts:</strong> Strategic layouts & CTAs.</div>
-          <div><strong>Full stack support:</strong> Graphics, hosting handoff & monthly care.</div>
-        </div>
+  <!-- CLIENTS MARQUEE TICKER -->
+  <section class="clients-ticker-section">
+    <div class="ticker-label">Trusted by fast-growing brands, organizations &amp; businesses:</div>
+    <div class="ticker-wrapper">
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="ticker-dot">✦</span> Jammu Sports Club</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> Klasetu E-Commerce</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> Hum Saath Saath Hain NGO</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> MM GYM CLOUD Web App</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> The Knotted Grace</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> SGW Foundation</span>
+        <!-- Duplicate for infinite marquee -->
+        <span class="ticker-item"><span class="ticker-dot">✦</span> Jammu Sports Club</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> Klasetu E-Commerce</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> Hum Saath Saath Hain NGO</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> MM GYM CLOUD Web App</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> The Knotted Grace</span>
+        <span class="ticker-item"><span class="ticker-dot">✦</span> SGW Foundation</span>
       </div>
+    </div>
+  </section>
 
-      <aside class="about-aside">
-        <div class="card">
-          <h4>Package highlight</h4>
-          <p><strong>Starter — ₹5,999</strong> : 3 pages, mobile-first, basic SEO, 7 days support after launch.</p>
-          <a class="small-btn" href="#contact">Request Starter</a>
-        </div>
+  <!-- ABOUT SECTION -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-badge">Why M&amp;M Services</div>
+      <h2 class="section-title">We combine aesthetic design with <span class="gradient-text">conversion engineering</span>.</h2>
+      <p class="section-subtitle">
+        We aren't just coders; we are business-first creators. Every layout, button, and headline is crafted to get you more enquiries, phone calls, and paying clients.
+      </p>
 
-        <div class="card">
-          <h4>What we need</h4>
-          <ul>
-           <li>About your business</li>
-            <li>Logo (if available)</li>
-            <li>Page list & basic content</li>
+      <div class="about-grid">
+        <div class="feature-card">
+          <div class="feature-icon icon-speed">⚡</div>
+          <h3>Lightning Fast Delivery</h3>
+          <p>We don't keep you waiting for months. Starter websites go live in 3 to 7 days, complete with responsive layouts, tested on mobile, tablets, and desktops.</p>
+          <ul class="feature-bullets">
+            <li>Swift turnaround with milestones</li>
+            <li>Zero bloated code or slow templates</li>
+            <li>Ready for Google indexing instantly</li>
           </ul>
         </div>
-      </aside>
+
+        <div class="feature-card highlighted-card">
+          <div class="popular-ribbon">Core Focus</div>
+          <div class="feature-icon icon-conversion">🎯</div>
+          <h3>Engineered to Convert</h3>
+          <p>Pretty sites that don't make sales are useless. We design clear user journeys, WhatsApp click-to-chat triggers, and prominent call-to-actions.</p>
+          <ul class="feature-bullets">
+            <li>Direct 1-click WhatsApp integrations</li>
+            <li>Clear contact funnels &amp; lead forms</li>
+            <li>Mobile-first user experience</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-support">🛡️</div>
+          <h3>Full Stack &amp; Continuous Care</h3>
+          <p>From domain setup and SSL certificates to hosting on modern edge servers (Vercel/Cloudflare) and ongoing maintenance &mdash; we handle everything.</p>
+          <ul class="feature-bullets">
+            <li>Free post-launch support</li>
+            <li>Speed &amp; technical SEO optimization</li>
+            <li>Regular updates &amp; security maintenance</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="section alt">
+  <!-- SERVICES BENTO GRID -->
+  <section class="section services-section" id="services">
     <div class="container">
-      <h3>Services we provide</h3>
+      <div class="section-badge">Our Expertise</div>
+      <h2 class="section-title">End-to-end digital services to <span class="gradient-text">ignite your growth</span>.</h2>
+      <p class="section-subtitle">
+        Everything you need to launch, modernize, and dominate your niche online.
+      </p>
 
       <div class="services-grid">
-        <!-- many services, as requested -->
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Custom Website Design</h4>
-          <p>Unique, responsive layouts tailored to your brand & goals.</p>
+        <!-- Service 1: Custom Web Development -->
+        <div class="service-box">
+          <div class="service-top">
+            <div class="service-icon-box">💻</div>
+            <span class="service-tag">Popular</span>
+          </div>
+          <h3>Custom Website Design &amp; Development</h3>
+          <p>Bespoke, high-performance websites tailored to your brand goals. Mobile-first, responsive, and ultra-fast.</p>
+          <div class="service-features">
+            <span>Corporate Sites</span>
+            <span>Business Portfolios</span>
+            <span>High-Speed Landing Pages</span>
+          </div>
         </div>
 
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Landing Pages & Funnels</h4>
-          <p>High-converting landing pages for ads and lead capture.</p>
+        <!-- Service 2: E-Commerce & Stores -->
+        <div class="service-box">
+          <div class="service-top">
+            <div class="service-icon-box">🛍️</div>
+            <span class="service-tag">E-Commerce</span>
+          </div>
+          <h3>Online Stores &amp; E-Commerce</h3>
+          <p>Turn browsing visitors into loyal buyers. Dynamic product catalogs, seamless checkout, and integrated payment gateways.</p>
+          <div class="service-features">
+            <span>Custom Stores</span>
+            <span>Razorpay / UPI Integration</span>
+            <span>Inventory Flow</span>
+          </div>
         </div>
 
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Logo & Brand Identity</h4>
-          <p>Professional logos, color palettes & social templates.</p>
+        <!-- Service 3: Custom Web Applications & SaaS -->
+        <div class="service-box">
+          <div class="service-top">
+            <div class="service-icon-box">⚙️</div>
+            <span class="service-tag">Web Apps</span>
+          </div>
+          <h3>Web Applications &amp; Portals</h3>
+          <p>Need more than a brochure site? We build membership portals, booking systems, and business management dashboards (like MM GYM CLOUD).</p>
+          <div class="service-features">
+            <span>Custom Dashboards</span>
+            <span>Member Portals</span>
+            <span>Database Integration</span>
+          </div>
         </div>
 
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Templates & Design Systems</h4>
-          <p>Reusable templates for faster launches and consistency.</p>
+        <!-- Service 4: Logo & Brand Identity -->
+        <div class="service-box">
+          <div class="service-top">
+            <div class="service-icon-box">🎨</div>
+            <span class="service-tag">Branding</span>
+          </div>
+          <h3>Logo &amp; Visual Identity</h3>
+          <p>Stand out with a memorable brand identity. Distinctive logos, color typography palettes, social banners, and marketing assets.</p>
+          <div class="service-features">
+            <span>Modern Logos</span>
+            <span>Color Palettes</span>
+            <span>Social Media Kits</span>
+          </div>
         </div>
 
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>SEO & Performance</h4>
-          <p>Speed optimisation, on-page SEO, metadata & schema setup.</p>
+        <!-- Service 5: SEO & Performance -->
+        <div class="service-box">
+          <div class="service-top">
+            <div class="service-icon-box">🚀</div>
+            <span class="service-tag">Visibility</span>
+          </div>
+          <h3>SEO &amp; Google Speed Optimization</h3>
+          <p>Get discovered on Google. We implement structured metadata, schema markups, image optimization, and 90+ PageSpeed audits.</p>
+          <div class="service-features">
+            <span>Rank Math &amp; Schema</span>
+            <span>Core Web Vitals</span>
+            <span>Google Search Console</span>
+          </div>
         </div>
 
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Ad Creatives & Campaigns</h4>
-          <p>Ad design, copy & campaign setup for Facebook & Instagram.</p>
-        </div>
-
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Plugin / Integration</h4>
-          <p>Payment gateways, booking, forms, analytics and third-party tools.</p>
-        </div>
-
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Monthly Maintenance</h4>
-          <p>Backups, updates and small changes on request.</p>
-        </div>
-
-        <div class="service tilt" data-tilt data-tilt-max="8">
-          <h4>Content & Copywriting</h4>
-          <p>Short, conversion-focused copy for pages and ads.</p>
+        <!-- Service 6: Monthly Maintenance & Care -->
+        <div class="service-box">
+          <div class="service-top">
+            <div class="service-icon-box">🔧</div>
+            <span class="service-tag">Reliability</span>
+          </div>
+          <h3>Monthly Maintenance &amp; Growth Support</h3>
+          <p>Never worry about technical glitches, broken links, or security alerts. We keep your digital infrastructure updated 24/7.</p>
+          <div class="service-features">
+            <span>Automated Backups</span>
+            <span>Content Updates</span>
+            <span>Priority WhatsApp Support</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS / PORTFOLIO -->
-  <section id="projects" class="section">
+  <!-- PROJECTS / PORTFOLIO SHOWCASE -->
+  <section class="section projects-section" id="projects">
     <div class="container">
-      <div class="projects-head">
-        <h3>Our Projects</h3>
+      <div class="section-badge">Proven Track Record</div>
+      <h2 class="section-title">Featured Work &amp; <span class="gradient-text">Live Client Deployments</span>.</h2>
+      <p class="section-subtitle">
+        Explore real platforms we've designed, developed, and deployed for businesses across India.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="portfolio-filters" id="projectFilters">
+        <button class="filter-btn active" data-filter="all">All Projects (6)</button>
+        <button class="filter-btn" data-filter="web-platform">Web Platforms</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="ngo">NGO &amp; Community</button>
       </div>
 
-      <div id="projectsGrid" class="projects-grid">
-        <!-- tiles injected by script.js -->
+      <!-- Projects Grid -->
+      <div class="projects-grid-main" id="projectsMainGrid">
+        
+        <!-- Project 1: Jammu Sports Club (NEW HERO FEATURE) -->
+        <article class="project-card" data-category="web-platform">
+          <div class="project-thumb">
+            <img src="jammusportsclub.png" alt="Jammu Sports Club Official Website" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://jammusportsclub.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-white">
+                Visit Live Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <span class="project-badge badge-primary">Featured Work</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-category">Sports &amp; Fitness Academy</span>
+              <span class="project-domain">jammusportsclub.com</span>
+            </div>
+            <h3 class="project-name">Jammu Sports Club</h3>
+            <p class="project-desc">Premier multi-sport academy and cricket ground digital destination in Jammu. Built with modern SEO, match facilities showcase, and dynamic inquiry integration.</p>
+            <div class="project-tags">
+              <span>SEO Optimized</span>
+              <span>Mobile-First</span>
+              <span>Fast Edge CDN</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Klasetu E-Commerce -->
+        <article class="project-card" data-category="ecommerce">
+          <div class="project-thumb">
+            <img src="Klasetu.png" alt="Klasetu E-Commerce Platform" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://klasetu.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-white">
+                Visit Live Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <span class="project-badge badge-success">E-Commerce</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-category">E-Commerce Fashion</span>
+              <span class="project-domain">klasetu.com</span>
+            </div>
+            <h3 class="project-name">Klasetu E-Commerce</h3>
+            <p class="project-desc">Contemporary apparel and retail shopping portal. Designed for frictionless mobile browsing, fast-loading product catalogs, and high-conversion checkouts.</p>
+            <div class="project-tags">
+              <span>Catalog System</span>
+              <span>Payment Gateway</span>
+              <span>Responsive UI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: MM GYM CLOUD -->
+        <article class="project-card" data-category="web-platform">
+          <div class="project-thumb">
+            <img src="MM GYM CLOUD.png" alt="MM Gym Cloud Management Platform" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://mmgymcloud.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-white">
+                Visit Live Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <span class="project-badge badge-info">SaaS / Web App</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-category">Fitness Tech / SaaS</span>
+              <span class="project-domain">mmgymcloud.com</span>
+            </div>
+            <h3 class="project-name">MM GYM CLOUD</h3>
+            <p class="project-desc">Complete cloud software solution built for modern fitness centres and gym chains. Streamlines member subscriptions, renewals, fee alerts, and trainer schedules.</p>
+            <div class="project-tags">
+              <span>Cloud SaaS</span>
+              <span>Member Management</span>
+              <span>Automated Reminders</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Hum Saath Saath Hain NGO -->
+        <article class="project-card" data-category="ngo">
+          <div class="project-thumb">
+            <img src="hssh.png" alt="Hum Saath Saath Hain NGO Platform" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://hsshngo.org" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-white">
+                Visit Live Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <span class="project-badge badge-warm">Social Impact</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-category">Non-Profit Organization</span>
+              <span class="project-domain">hsshngo.org</span>
+            </div>
+            <h3 class="project-name">Hum Saath Saath Hain</h3>
+            <p class="project-desc">Official website for registered social welfare organization. Empowers donation drives, community updates, volunteer onboarding, and transparency reporting.</p>
+            <div class="project-tags">
+              <span>Donation Integration</span>
+              <span>Volunteer Intake</span>
+              <span>Media Gallery</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: The Knotted Grace -->
+        <article class="project-card" data-category="ecommerce">
+          <div class="project-thumb">
+            <img src="Knotted.png" alt="The Knotted Grace E-Commerce Store" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://theknottedgrace.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-white">
+                Visit Live Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <span class="project-badge badge-success">Handcrafted Store</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-category">Artisanal &amp; Home Decor</span>
+              <span class="project-domain">theknottedgrace.com</span>
+            </div>
+            <h3 class="project-name">The Knotted Grace</h3>
+            <p class="project-desc">Boutique e-commerce store celebrating handcrafted knot artistry and modern living decor. Styled with warm, elegant visuals and seamless order checkout.</p>
+            <div class="project-tags">
+              <span>Boutique UI</span>
+              <span>Mobile Checkout</span>
+              <span>Brand Story</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: SGW Foundation -->
+        <article class="project-card" data-category="ngo">
+          <div class="project-thumb">
+            <img src="SGWF.png" alt="SGW Foundation Web Portal" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://sgwfoundation.org" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-white">
+                Visit Live Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <span class="project-badge badge-warm">Foundation Portal</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-category">Philanthropy &amp; Trust</span>
+              <span class="project-domain">sgwfoundation.org</span>
+            </div>
+            <h3 class="project-name">SGW Foundation</h3>
+            <p class="project-desc">Community outreach and humanitarian relief portal. Clear mission presentation, project milestones, and intuitive contact avenues for donor partnerships.</p>
+            <div class="project-tags">
+              <span>Clean Layout</span>
+              <span>Fast CDN</span>
+              <span>Impact Showcase</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW / PROCESS -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <div class="section-badge">How It Works</div>
+      <h2 class="section-title">Our straightforward <span class="gradient-text">4-step process</span>.</h2>
+      <p class="section-subtitle">
+        Transparent communication, clear timelines, and zero surprises from day one to launch.
+      </p>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h4>Discovery &amp; Blueprint</h4>
+          <p>We analyze your business, target audience, and key goals. We define page structure, content needs, and required integrations.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h4>Design &amp; Prototyping</h4>
+          <p>We craft modern, responsive UI mockups tailored to your brand identity, focusing heavily on user experience and conversion triggers.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h4>High-Speed Development</h4>
+          <p>We convert the approved design into clean, ultra-fast code with interactive features, WhatsApp links, and search engine optimization.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h4>Testing &amp; Live Launch</h4>
+          <p>After thorough multi-device testing and speed audits, we connect your custom domain, set up SSL, and provide post-launch care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING PACKAGES -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-badge">Transparent Investment</div>
+      <h2 class="section-title">Simple pricing with <span class="gradient-text">no hidden fees</span>.</h2>
+      <p class="section-subtitle">
+        Choose the plan that fits your business stage. Custom quotes available for complex apps.
+      </p>
+
+      <div class="pricing-grid">
+        <!-- Plan 1: Starter -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <span class="plan-name">Starter Package</span>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount">5,999</span>
+              <span class="period">one-time</span>
+            </div>
+            <p class="plan-desc">Ideal for small businesses, personal portfolios, and startups looking to get online fast.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span>✓</span> Up to 3-5 Custom Pages</li>
+            <li><span>✓</span> 100% Mobile &amp; Tablet Responsive</li>
+            <li><span>✓</span> Direct 1-Click WhatsApp Button</li>
+            <li><span>✓</span> Basic On-Page SEO Setup</li>
+            <li><span>✓</span> Contact Form with Email Alerts</li>
+            <li><span>✓</span> 7 Days Free Post-Launch Support</li>
+            <li><span>✓</span> Fast 3–5 Day Delivery</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary btn-block">Choose Starter</a>
+        </div>
+
+        <!-- Plan 2: Growth (Featured) -->
+        <div class="pricing-card featured-pricing">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="plan-header">
+            <span class="plan-name">Business Growth</span>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount">12,999</span>
+              <span class="period">one-time</span>
+            </div>
+            <p class="plan-desc">For established companies needing a high-converting, professional digital presence.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span>✓</span> Up to 8 Custom Pages / Dynamic Sections</li>
+            <li><span>✓</span> High-End Custom UI &amp; Brand Styling</li>
+            <li><span>✓</span> WhatsApp &amp; Dynamic Lead Funnel</li>
+            <li><span>✓</span> Advanced Google SEO &amp; Speed Optimization</li>
+            <li><span>✓</span> Google Analytics &amp; Tag Manager Setup</li>
+            <li><span>✓</span> Social Media Share Cards (Open Graph)</li>
+            <li><span>✓</span> 30 Days Free Maintenance &amp; Support</li>
+            <li><span>✓</span> Priority Turnaround (5–7 Days)</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Choose Growth</a>
+        </div>
+
+        <!-- Plan 3: Custom / E-Comm / Web App -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <span class="plan-name">E-Commerce &amp; Custom App</span>
+            <div class="plan-price">
+              <span class="amount custom-amount">Custom</span>
+              <span class="period">quote based</span>
+            </div>
+            <p class="plan-desc">For online stores, portals, gym software, and tailored web applications.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span>✓</span> Full E-Commerce / Custom SaaS Architecture</li>
+            <li><span>✓</span> Payment Gateway (Razorpay/Stripe/UPI)</li>
+            <li><span>✓</span> Customer Portals &amp; Admin Dashboards</li>
+            <li><span>✓</span> Product Catalog / Booking Engines</li>
+            <li><span>✓</span> Automated Invoicing &amp; SMS/WhatsApp Alerts</li>
+            <li><span>✓</span> Dedicated Hosting &amp; Domain Setup</li>
+            <li><span>✓</span> 60 Days Premium Extended SLA</li>
+          </ul>
+          <a href="https://wa.me/919622337107?text=Hi%20M%26M%20Services,%20I%20need%20a%20custom%20quote%20for%20my%20e-commerce%20or%20web%20app%20project." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Request Custom Quote</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="section alt">
+  <section class="section testimonials-section" id="testimonials">
     <div class="container">
-      <h3>What clients say</h3>
+      <div class="section-badge">Client Testimonials</div>
+      <h2 class="section-title">What founders say about <span class="gradient-text">working with us</span>.</h2>
+      <p class="section-subtitle">Real feedback from clients whose digital presence we transformed.</p>
+
       <div class="testimonials-grid">
-        <blockquote class="testi">
-          <p>"Fast delivery, clear communication and great results. Conversion improved after the redesign."</p>
-          <cite>— Monu Verma, HSSH NGO</cite>
-        </blockquote>
-
-        <blockquote class="testi">
-          <p>"M&M Services built my new website exactly the way I wanted—clean, modern and fast. The process was smooth, communication was clear, and everything was delivered on time. Highly recommended!"</p>
-          <cite>— Priyanka Verma, Klasetu(E-commerce)</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section contact-section">
-    <div class="container contact-grid">
-      <div class="contact-left">
-        <h3>Get in touch</h3>
-        <p>Send brief, links and budget — we’ll reply with timeline & cost.</p>
-
-      <form id="contactForm"  class="contact-form" onsubmit="sendToWhatsApp(event)">
-          <input name="name" placeholder="Your name" required />
-          <input name="email" type="email" placeholder="Email" required />
-          <input name="phone" placeholder="Phone (optional)" />
-          <input name="subject" placeholder="Subject / Project title" />
-          <textarea name="message" placeholder="Project details & deadline" required></textarea>
-
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://mm-services.vercel.app/thank-you.html" />
-
-          <button type="submit" class="btn primary">Send Request</button>
-          <p id="formStatus" class="form-status" aria-live="polite"></p>
-        </form>
-      </div>
-
-      <aside class="contact-right">
-        <div class="card">
-          <h4>Quick details</h4>
-          <ul>
-            <li>Typical delivery: 3–14 days (depends on scope)</li>
-            <li>Payment: 50% advance, rest on delivery (flexible)</li>
-            <li>Support: 7 days free support on launch</li>
-          </ul>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"M&amp;M Services rebuilt our NGO website from the ground up. The design is clean, fast, and gives our volunteers and donors complete confidence. Incredible turnaround speed."</p>
+          <div class="client-meta">
+            <div class="client-avatar">MV</div>
+            <div class="client-details">
+              <strong>Monu Verma</strong>
+              <span>Founder, HSSH NGO</span>
+            </div>
+          </div>
         </div>
-      </aside>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Our e-commerce store needed to look sleek and load instantly on mobile. M&amp;M Services understood exactly what we wanted and delivered a modern layout that increased our order inquiries immediately."</p>
+          <div class="client-meta">
+            <div class="client-avatar">PV</div>
+            <div class="client-details">
+              <strong>Priyanka Verma</strong>
+              <span>Founder, Klasetu E-Commerce</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Having a dedicated platform for Jammu Sports Club helped us reach hundreds of local athletes and parents. Fast loading, great SEO, and prompt support whenever we need changes."</p>
+          <div class="client-meta">
+            <div class="client-avatar">JS</div>
+            <div class="client-details">
+              <strong>Management Team</strong>
+              <span>Jammu Sports Club</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p>&copy; <span id="year"></span> M&M Services — All rights reserved.</p>
+  <!-- FAQ ACCORDION -->
+  <section class="section faq-section" id="faq">
+    <div class="container faq-container">
+      <div class="section-badge">Got Questions?</div>
+      <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span>.</h2>
       
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>How much time does it take to build and launch my website?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>For Starter and Business websites, our typical turnaround is <strong>3 to 7 working days</strong>, provided we have your basic content and requirements. For complex e-commerce stores or custom SaaS applications, it typically ranges between 10 to 20 days.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Will my website look good and function properly on mobile phones?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p><strong>100% Yes.</strong> Every website we build is mobile-first. Over 80% of web traffic today is mobile, so we strictly test touch targets, font scaling, navigation menus, and lightning-fast loading speeds on iOS and Android devices.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>What do you need from me to start working?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>All we need to get started is: a brief overview of your business or services, your logo (if available), any specific color preferences, and contact details. Don't worry if your content isn't finalized &mdash; we help structure and write conversion-focused copy for you.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>How does the payment process work?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>We work with a transparent milestone model: <strong>50% advance</strong> to book your slot and commence UI/UX design &amp; development, and the remaining <strong>50% upon final approval and live launch</strong> on your custom domain.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Do you provide maintenance and updates after launch?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Yes! Every package comes with free post-launch support to resolve any minor tweaks or questions. We also offer affordable monthly care plans for continuous updates, security checks, and backups.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & CONVERSION SECTION -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-grid">
+          
+          <div class="contact-left">
+            <div class="section-badge">Get In Touch</div>
+            <h2 class="contact-heading">Let&rsquo;s build something <span class="gradient-text">exceptional</span> together.</h2>
+            <p class="contact-desc">
+              Have a project in mind, need a quote, or want to revamp an existing website? Reach out right now &mdash; we reply within a few hours.
+            </p>
+
+            <div class="direct-contacts">
+              <a href="https://wa.me/919622337107?text=Hi%20M%26M%20Services,%20I'm%20reaching%20out%20for%20a%20new%20website%20project." target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-icon icon-wa">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </div>
+                <div class="contact-details">
+                  <span class="label">Instant WhatsApp Chat</span>
+                  <strong>+91 96223 37107</strong>
+                </div>
+              </a>
+
+              <a href="mailto:mmservices.connect@gmail.com" class="contact-item">
+                <div class="contact-icon icon-mail">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-details">
+                  <span class="label">Email Inquiry</span>
+                  <strong>mmservices.connect@gmail.com</strong>
+                </div>
+              </a>
+
+              <div class="contact-item static-item">
+                <div class="contact-icon icon-geo">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-details">
+                  <span class="label">Location &amp; Delivery</span>
+                  <strong>Jammu &amp; Kashmir &bull; Serving Pan-India</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form id="contactForm" class="contact-form-card" onsubmit="handleFormSubmit(event)">
+              <h3 class="form-title">Send a Quick Inquiry</h3>
+              <p class="form-sub">Fill out the details below &mdash; this connects directly with our team on WhatsApp for fastest response.</p>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="userName">Your Name *</label>
+                  <input type="text" id="userName" name="name" placeholder="e.g. Rahul Sharma" required />
+                </div>
+                <div class="form-group">
+                  <label for="userPhone">Phone / WhatsApp *</label>
+                  <input type="tel" id="userPhone" name="phone" placeholder="e.g. +91 98765 43210" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail">Email Address</label>
+                <input type="email" id="userEmail" name="email" placeholder="e.g. rahul@business.com" />
+              </div>
+
+              <div class="form-group">
+                <label for="serviceType">Service Needed</label>
+                <select id="serviceType" name="service">
+                  <option value="Custom Website Design">Custom Website Design (Starter / Business)</option>
+                  <option value="E-Commerce Store">E-Commerce Online Store</option>
+                  <option value="Web Application / Portal">Web Application / Portal</option>
+                  <option value="Website Redesign">Redesign Existing Website</option>
+                  <option value="Logo & Branding">Logo &amp; Brand Identity</option>
+                  <option value="SEO & Speed Optimization">SEO &amp; Performance</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Project Details &amp; Requirements *</label>
+                <textarea id="userMessage" name="message" rows="3" placeholder="Tell us about your business, reference websites you like, or any specific deadlines..." required></textarea>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+                <span>Send via WhatsApp &rarr;</span>
+              </button>
+
+              <div id="formStatus" class="form-status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand-row">
+        <a href="#" class="brand">
+          <img src="MM LOGO.jpeg" alt="M&M Services" class="brand-logo" />
+          <div class="brand-info">
+            <span class="brand-name">M&amp;M <span class="gradient-text">Services</span></span>
+            <span class="brand-sub">Crafting Digital Excellence</span>
+          </div>
+        </a>
+
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Portfolio</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p>&copy; <span id="currentYear"></span> M&amp;M Services. All rights reserved.</p>
+        <p class="footer-tagline">Engineered with speed, passion &amp; modern precision.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <!-- FLOATING QUICK WHATSAPP BUTTON -->
+  <a href="https://wa.me/919622337107?text=Hi%20M%26M%20Services,%20I'm%20interested%20in%20creating%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="floating-wa" title="Chat on WhatsApp">
+    <div class="wa-ripple"></div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
